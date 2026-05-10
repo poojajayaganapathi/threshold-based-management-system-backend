@@ -1,20 +1,25 @@
 {
   "name": "backend",
   "version": "1.0.0",
-  "description": "FSD - 44",
+  "description": "FSD - 44 Threshold-Based Alert Management System",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
+    "start": "node index.js",
+    "dev": "nodemon index.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^6.0.0",
+    "cors": "^2.8.5",
     "dotenv": "^17.2.3",
     "express": "^5.2.1",
     "jsonwebtoken": "^9.0.3",
     "mongoose": "^8.22.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
   }
 }
