@@ -34,6 +34,10 @@ app.get("/", (req, res) => {
     res.json({ message: "Threshold-Based Alert Management System API is running" })
 })
 
-app.listen(process.env.PORT, () => {
-    console.log("Server is running on port", process.env.PORT)
-})
+if (process.env.NODE_ENV !== 'production') {
+    app.listen(process.env.PORT || 3000, () => {
+        console.log("Server is running on port", process.env.PORT || 3000)
+    })
+}
+
+module.exports = app
